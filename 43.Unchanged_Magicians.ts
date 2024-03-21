@@ -1,0 +1,36 @@
+// unchanged magicians: start with your work from Exercise 40. call the function make_great() with a copy
+// of the array of magicians names. Because the original array will be unchanged, return the new array and
+// and store it in a separate array. call show_magicians() with each array to show that you have one array
+// of the original names and one array with the great added to each magician's name.
+
+let magician : string[] = ['Harry Potter', 'Hermione Granger', 'Ron Weasley', 'Albus Dumbledore'];
+function copyArray(arr:string[]){
+    return [...arr]
+}
+
+function make_great ( magicianArray:string[] ){
+    for(let i=0; i<magicianArray.length; i++){
+        magicianArray[i] = 'the Great ' + magicianArray[i]
+    }
+}
+
+function show_magicians(magicians: string[]){
+    magicians.forEach(Element => {
+        console.log(Element);
+    });
+}
+
+const copymagicianArray = copyArray(magician)
+
+make_great(copymagicianArray);
+
+console.log('\n\nThis is my orginal array:');
+show_magicians(magician);
+
+console.log('\n\nThis is my modified copy of the array:');
+show_magicians(copymagicianArray);
+
+
+
+
+
